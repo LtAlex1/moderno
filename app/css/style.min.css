@@ -326,6 +326,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  max-width: 245px;
 }
 
 .product__item-autor .avatar {
@@ -345,6 +346,10 @@ body {
   font-size: 14px;
 }
 
+.product__item-autor-star {
+  color: #263238;
+}
+
 .products__bottom-btn {
   text-align: center;
 }
@@ -362,4 +367,29 @@ body {
 
 .product-slider {
   padding: 110px 0px 120px;
+}
+
+.product-slider .slick-dots {
+  text-align: center;
+  margin-top: 50px;
+}
+
+.product-slider .slick-dots li {
+  display: inline-block;
+  margin-left: 3px;
+  margin-right: 3px;
+}
+
+.product-slider .slick-dots li.slick-active button {
+  background-color: #8bc34a;
+}
+
+.product-slider .slick-dots li button {
+  border-radius: 50%;
+  background-color: #e8e8e8;
+  font-size: 0;
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  outline: none;
 }
