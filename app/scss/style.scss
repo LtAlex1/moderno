@@ -77,13 +77,13 @@
     &-title{
         margin-bottom:  28px;
         font-size: 48px;
-        font-weight: 700;
+        @include f700;
         line-height: 72px;
     }
     &-text{
         margin-bottom: 50px;
         font-size: 20px;
-        font-weight: 500;
+        @include f500;
         line-height: 10px;
     }
     &-form{
@@ -98,13 +98,13 @@
             height: 56px;
             border:none;
             font-size: 14px;
-            font-weight: 500;
+            @include f500;
             outline: none;
             padding-left: 25px;
             padding-right: 60px;
             &::placeholder{
                 color: #90a4ae;
-                font-weight: 500;
+                @include f500;
             }
         }
         button {
@@ -170,7 +170,7 @@
         padding: 10px 30px;
         align-items: center;
         min-width: 90px;
-        font-weight: 500;
+        @include f500;
         border-bottom: 1px solid #e7ecf2;
     } 
     &-name {
@@ -190,7 +190,7 @@
     &-price {
         font-size: 20px;
         color: $bg;
-        font-weight: 700;
+        @include f700;
     }
     &-info {
         display: flex;
@@ -216,7 +216,7 @@
         
       }
       span {
-          font-weight: 500;
+        @include f500;
         font-size: 14px;
       }
        &-star {
@@ -272,3 +272,45 @@
 }
 
 // end slider
+
+// start author block
+.author{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 750px;
+    
+    &__box {
+        max-width: 650px;
+        width: 100%;
+        min-height: 215px;
+        display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $green;
+    
+    }
+    &__title{
+    font-size: 30px;
+    line-height: 30px;
+    color: #ffffff;
+    margin-right: 45px;
+    max-width: 260px;
+        span{
+            @include f700;
+        }
+
+    }
+    &__link{
+        font-size: 18px;
+        line-height: 36px;
+        padding: 14px 40px;
+        background-color: #ffffff;
+    }
+}
+
+
+// end author block
