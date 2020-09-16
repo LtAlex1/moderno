@@ -10,6 +10,10 @@ html {
           box-sizing: inherit;
 }
 
+html, body {
+  height: 100%;
+}
+
 a {
   display: inline-block;
   text-decoration: none;
@@ -30,6 +34,29 @@ body {
   color: #546e7a;
 }
 
+.wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100%;
+}
+
+.content {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 auto;
+          flex: 1 0 auto;
+}
+
+.footer {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -40,6 +67,10 @@ body {
   width: 100%;
   margin: 0 auto;
   padding: 0 30px;
+}
+
+.page-content {
+  background-color: #f4f6f5;
 }
 
 @media (max-width: 720px) {
@@ -56,6 +87,35 @@ body {
   line-height: 60px;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.breadcrumbs__inner {
+  padding: 45px 0px 40px;
+}
+
+.breadcrumbs__list li {
+  display: inline-block;
+  position: relative;
+}
+
+.breadcrumbs__list li + li {
+  padding-left: 24px;
+}
+
+.breadcrumbs__list li + li::before {
+  content: '-';
+  position: absolute;
+  left: 8px;
+  color: #8bc34a;
+}
+
+.breadcrumbs__list li:last-child a,
+.breadcrumbs__list li:last-child span {
+  color: #263238;
+}
+
+.breadcrumbs__list a {
+  color: #b0bec5;
 }
 
 @font-face {
@@ -188,6 +248,18 @@ body {
   background-size: cover;
   background-position: center;
   min-height: 533px;
+}
+
+.search.page-search {
+  min-height: 230px;
+}
+
+.search.page-search .search__inner {
+  padding: 55px 0 70px;
+}
+
+.search.page-search .search__inner-text {
+  margin-bottom: 20px;
 }
 
 .search__inner {
